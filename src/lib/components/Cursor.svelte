@@ -22,10 +22,12 @@
 		hoverables &&
 			links.forEach((hoverable) => {
 				hoverable.addEventListener('mouseenter', () => {
-					size += 20;
+					// increase size relative to the current size
+					size = size * 1.5;
 				});
 				hoverable.addEventListener('mouseleave', () => {
-					size -= 20;
+					// decrease size relative to the current size
+					size = size / 1.5;
 				});
 			});
 	});
